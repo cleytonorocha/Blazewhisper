@@ -24,6 +24,6 @@ Sir Dandelion é um cavaleiro veterano, conhecido por suas décadas de batalhas 
 ## Como Executar
 
 1. Clone o repositório;
-2. Execute o docker compose up;
-3. Mande um parametro de url com o seguinte template: "https:localhost:8080/api/v1/generate?promptMessage="Mensagem para a ai" (Temporário);
+2. Execute o "docker compose up -d";
+3. Instale o Ollama 3.1 acessando o modo de interação do docker "docker exec -it ollama ollama run llama2-uncensored"
 4. Mantenha livre as portas 8080 e a 8090 do seu servidor.

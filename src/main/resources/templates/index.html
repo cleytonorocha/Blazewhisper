@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Ollamaai</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../static/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Ollama Ai</title>
 </head>
-<body>
-
-    <h1>Generate Data</h1>
-    <form id="generateForm">
-        <input type="text" id="promptInput" name="promptMessage" placeholder="Enter a message"/>
-        <button type="button" onclick="generateData()">Generate</button>
-    </form>
-    <p id="response"></p>
-
+<body class="align-content-center">
+    <section class="d-flex flex-column align-items-center ">
+        <img class="img-fluid" style="height: 200px;" id="principal-logo" src="../static/principal.png" alt="Imagem da ollama ai">
+        <h1 class="display-1">Ollama AI</h1>
+        <form id="generateForm" class="input-group input-group-lg col-5">
+            <input type="text" id="promptInput" name="promptMessage" placeholder="Mande uma Mensagem" class="form-control"/>
+            <button class="btn btn-outline-secondary" type="button" onclick="generateData()">Generate</button>
+        </form>
+        <div class="input-group form-floating col-8 mt-5">
+            <textarea class="form-control" placeholder="Espere a resposta" rows="12" id="response"></textarea>
+        </div>
+    </section>
+    
     <script>
+        let activeButton = false;
         function generateData() {
-            var promptMessage = $('#promptInput').val();
-
+            
+            this.activeButton = true
+            let promptMessage = $('#promptInput').val();
             $.ajax({
                 url: '/generate',
                 type: 'GET',
@@ -32,6 +41,5 @@
             });
         }
     </script>
-
 </body>
 </html>

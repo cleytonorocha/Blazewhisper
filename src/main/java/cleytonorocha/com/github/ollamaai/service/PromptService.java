@@ -20,9 +20,7 @@ public class PromptService {
     public String generate(String prompt){
         ChatResponse response = ollamaChatModel.call(
             new Prompt(prompt, OllamaOptions.create()
-            .withModel(OllamaModel.LLAMA2_UNCENSORED.getModelName())
-            .withVocabOnly(true)
-            )
+            .withModel(OllamaModel.LLAMA2_UNCENSORED.getModelName()))
         );
         return response.getResult().getOutput().getContent();
     }

@@ -1,0 +1,10 @@
+html{
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+}
+body{
+    height: 90% !important;
+}
