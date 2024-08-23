@@ -19,7 +19,8 @@ Sir Dandelion é um cavaleiro veterano, conhecido por suas décadas de batalhas 
 - **Java 17**
 - **Maven**
 - **Spring Boot 3.3.2**
-- **spring-ai-ollama-spring-boot-starter**
+- **Spring-ai-ollama-spring-boot-starter**
+- **Docker**
 
 ## Como Executar
 
