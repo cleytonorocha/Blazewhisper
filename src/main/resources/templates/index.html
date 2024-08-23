@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ollamaai</title>
 </head>
 <body>
+
+    <h1>Generate Data</h1>
+    <form id="generateForm">
+        <input type="text" id="promptInput" name="promptMessage" placeholder="Enter a message"/>
+        <button type="button" onclick="generateData()">Generate</button>
+    </form>
+    <p id="response"></p>
+
+    <script>
+        function generateData() {
+            var promptMessage = $('#promptInput').val();
+
+            $.ajax({
+                url: '/generate',
+                type: 'GET',
+                data: { promptMessage: promptMessage },
+                success: function(response) {
+                    $('#response').text(response);
+                },
+                error: function(xhr, status, error) {
+                    $('#response').text('An error occurred: ' + error);
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>

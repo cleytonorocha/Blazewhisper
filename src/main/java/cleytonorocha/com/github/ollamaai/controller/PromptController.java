@@ -14,7 +14,7 @@ public class PromptController {
     @Autowired
     private PromptService promptService;
     
-    @GetMapping("api/v1/generate")
+    @GetMapping("generate")
     public String generate(@RequestParam(defaultValue = "Say anything", value = "promptMessage") String param) {
         return promptService.generate(param);
     }
