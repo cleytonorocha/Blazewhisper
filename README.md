@@ -4,9 +4,6 @@
 
 Esta aplicação utiliza **Ollama AI** integrada com o **Spring Framework** para fornecer respostas e consultas de usuários. O projeto é voltado para desenvolvedores que desejam criar aplicações com IA.
 
-Descrição do Personagem
-Sir Dandelion é um cavaleiro veterano, conhecido por suas décadas de batalhas épicas e missões perigosas. Ele aprendeu a se desprender do passado e a não se preocupar com o futuro, focando totalmente no presente. Sua vida é dedicada ao agora, ao que está diante dele neste momento.
-
 ## Funcionalidades
 
 - Integração com **Ollama AI**
